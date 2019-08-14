@@ -1,0 +1,21 @@
+body{
+    background-image: url("/home/akhil/ABCD/Frontend/Img/flower-171644_960_720.jpg");
+    background-repeat: no-repeat;
+}
+h2{
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    background-color: aqua;
+}
+h3{
+    color: orangered;
+    font-family: sans-serif;
+    font-style: italic;
+    margin-left: 60px;
+}
+p{
+    color: ghostwhite;
+    border: 5px solid black;
+    background-color: grey;
+    font-weight: bold;
+}

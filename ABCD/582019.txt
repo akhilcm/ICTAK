@@ -1,0 +1,51 @@
+DOM-DOCUMENT OBJECT MODEL
+--------------------------
+->document,hier
+
+connect javascript
+
+[browser--console >window]
+
+***{dom.html}
+document;
+document.getElementById('intro');
+document.getElementsByClassName('heading');
+
+let store= document.getElementsByClassName('heading');
+console.log(store[0]);
+
+document.getElementsByTagName('h1');
+document.querySelector('h1');
+document.querySelectorAll('h1');-multiple elements
+document.querySelectorAll('#intro');-"
+document.querySelectorAll('.heading');-"
+
+
+***************
+let arr=document.getElementById('intro');
+arr.textContent;-display textcontent->
+				      Home            
+					welcome you All"
+arr.innerHTML;-display id->
+			<a href=\"#\">Home</a>            
+			 welcome you All"
+
+arr.textContent='Warmly Welcome';-change content display reassign
+
+
+
+*****children
+let product=document.getElementById('prod');
+product.children;//3 children
+product.childNodes;//children with data
+product.childElementCount;//count of the number of children
+
+let chil=document.getElementById('child');
+
+
+******access attributes
+
+anc=document.querySelector('a');
+anc.getAttribute('href');//access the attribute
+anc.setAttribute('href','https://flipkart.com');//change the link
+chil.nextElementSibling;//to get the next element

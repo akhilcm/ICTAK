@@ -1,0 +1,174 @@
+<html>
+        <head>
+                <title>CSS Website Layout</title>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+                * {
+                  box-sizing: border-box;
+                }
+                
+                body {
+                  margin: 0;
+                  background-color: white;
+                }
+                
+                /* Style the header */
+                .header {
+                  background-color: red;
+                  padding: 20px;
+                  text-align: center;
+                  color: gold;
+                }
+                
+                /* Style the top navigation bar */
+                .topnav {
+                  overflow: hidden;
+                  background-color: #333;
+                }
+                
+                /* Style the topnav links */
+                .topnav a {
+                  float: left;
+                  display: block;
+                  color: #f2f2f2;
+                  text-align: center;
+                  padding: 14px 16px;
+                  text-decoration: none;
+                }
+                .footer a{
+            
+                  display: block;
+                  color: royalblue;
+                  text-align: center;
+                  padding: 15px;
+                  text-decoration: none;
+                  border: 2px double green;
+                  background-color: cadetblue;
+                }
+                .p{
+                    color: rgb(136, 1, 113);
+                    text-align: center;
+                    margin: 10px;
+                    padding: 10px;
+            
+                }
+                
+                /* Change color on hover */
+                .topnav a:hover {
+                  background-color: #ddd;
+                  color :blue;
+                }
+                .topnav a:link {
+                 color: pink;
+                }
+
+                /* visited link */
+                .topnav a:visited {
+                color: red;
+                }
+
+                /* mouse over link */
+                .topnav a:hover {
+                 color: blue;
+                    }
+
+                /* selected link */
+                .topnav a:active {
+                 color: yellow;
+                    }
+                
+                
+                /* Create three equal columns that floats next to each other */
+                .column {
+                  float: left;
+                  width: 50%;
+                  padding: 10px;
+                  text-align: center;
+                  color: chocolate;
+                  border: 2px dotted black;
+                  
+                }
+                .column img{
+                    width: 80%;
+                    height: 30%;
+                }
+                .job{
+                    text-align: center;
+                    color:red;
+                
+                }
+                .job p{
+                    color:tomato
+                    padding: 15px;
+                   
+                }
+                
+                /* Clear floats after the columns */
+                .row:after {
+                  content: "";
+                  display: table;
+                  clear: both;
+                }
+                
+                /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+                @media screen and (max-width:600px) {
+                  .column {
+                    width: 100%;
+                  }
+                }
+                </style>
+                </head>
+                <body>
+                
+                <div class="header">
+                    <h1>Rathnavel Subramaniam (RVS) College of Arts and Science</h1>
+                  <h1>Master of Computer Application(MCA)</h1>
+                  
+                </div>
+                
+                <div class="topnav">
+                  <a href="http://techmca.rvscas.ac.in">Home</a>
+                  <a href="https://www.rvscas.ac.in/about/about.php">About</a>
+                  <a href="#" style="float:right">Login</a>
+                </div>
+                <div class="p">
+                    <p>RVSCAS MCA FULL STACK & BIG DATA Programme is a 2 year Full-Time (Lateral Entry) study that offers specializations to become Full-Stack App Developer or Big Data Analyst. Our Curriculum is aligned with World's top level Technologies and students will be engaging in live projects & internships
+
+                            The programme is partnered with “OneWhistle Inc”, a USA based company from Silicon Valley, California. This company provides an opportunity for students to work in thier real-time product development </p>
+                </div>
+                
+                <div class="row">
+                  
+                  
+                  <div class="column">
+                    <h2>Full Stack Development - MERN</h2>
+                    <p>Students will learn how to develop end to end web & mobile applications which includes front-end-development,
+                            server side Technologies, database, hybrid & native mobile app. development and more. </p>
+                    
+                        <img src="/home/akhil/ABCD/Frontend/Img/index.png">
+                   
+                        </div>
+                  
+                  <div class="column">
+                    <h2>Big Data Engineering</h2>
+                    <p>Students will have hands-on experience to analyse huge data and predict future of the businesses by using
+                            Stream Processing & Real time Processing , Batch Processing, Hadoop, Spark, Hive, Pig, Storm, Flume & Hbase </p>
+                  
+                        <img src="/home/akhil/ABCD/Frontend/Img/big-data-1.jpg">
+                        </div>
+                </div>
+                <div class="job">
+                    <h3>Job Opportunities</h3>
+                    <p>Graduates will be employed as a Front-End Developer, Full Stack Developer, Hybrid Mobile App.<br>
+                            Developer Native Mobile App. Developer, Senior Software Engineer, Java Developer,<br>
+                            ETL Developer / Big Data Analyst and Business Intelligence Developer. </p>
+                </div>
+                <div class="footer">
+                    <a href="#">ENQUIRE NOW</a>
+                </div>
+                
+               
+                
+                </body>
+                </html>

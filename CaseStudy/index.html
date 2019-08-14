@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/home/ubuntu/AkhilICTKerala/CaseStudy/index.css" type="text/css"/>
+</head>
+<body>
+  <ul>
+      <li><a class="active" href="#home">TodoList</a></li>
+      <li style="float:right"><a href="#about" onclick="document.getElementById('id01').style.display='block'">Login</a></li>
+  </ul>
+  <div>
+    <img src="2.jpg">
+  </div>
+  <div id="id01" class="modal">
+    <form class="modal-content animate" action="/action_page.php">
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" id="username" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="password" required>
+        <button type="button" value="Login" id="submit" onclick="validate()">Login</button>
+        <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+      </div>
+      
+      <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+var modal = document.getElementById('id01');
+window.onclick = function(event){
+  if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+function validate(){
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    if ( username == "admin" && password == "12345"){
+        var callback=function(mycallback){
+            setTimeout(function(){
+                mycallback();
+            },3000);
+        };
+                alert("Match");
+                callback(function(){
+                window.location.replace("index2.html");
+        });
+    }
+        else{
+        alert("Doesnot Match")
+        return false;
+    }
+}
+
+</script>
+
+</body>
+</html>

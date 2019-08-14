@@ -1,0 +1,40 @@
+body{
+    background-color: aquamarine;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+header{
+    padding-top: 30px;
+    min-height: 60px;
+    border-bottom: 1px solid green;
+}
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+header nav{
+    display: inline;
+}
+header li{
+
+    display: inline;
+    padding: 20px;
+    float: left;
+
+}
+
+
+.high{
+    color: brown;
+}
+ 
+.new{
+    background-image: url("/home/akhil/ABCD/Frontend/Img/ict-sy.jpg");
+    height: 500px;
+    width: 500%;
+    background-repeat: no-repeat;
+}

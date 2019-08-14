@@ -1,0 +1,35 @@
+header{
+    color: blue;
+    background-color:#f1f1f1;
+    padding:15px;
+    text-align: center;
+}
+header li{
+    display: inline;
+
+}
+.link{
+    float:left;
+    width:20%;
+    text-align:center;
+}
+.link a{
+background-color:#e5e5e5;
+  padding:8px;
+  margin-top:7px;
+  display:block;
+  width:100%;
+  color:black;
+}
+.right{
+    background-color:#e5e5e5;
+    float:left;
+    width:20%;
+    padding:15px;
+    margin-top:7px;
+    text-align:center;
+}
+.main {
+    float:left;
+    width:60%;
+    padding:0 20px;

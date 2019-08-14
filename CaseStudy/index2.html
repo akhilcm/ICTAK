@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>Mainpage</title>
+    <link rel="stylesheet" href="/home/ubuntu/AkhilICTKerala/CaseStudy/index.css" type="text/css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="/home/ubuntu/AkhilICTKerala/CaseStudy/main.js"></script>
+    <script src="/home/ubuntu/AkhilICTKerala/CaseStudy/jquery.min.js"></script>
+    <script src="/home/ubuntu/AkhilICTKerala/CaseStudy/jquery-migrate.min.js"></script>
+  </head>
+  <ul>
+    <li><a class="active" href="#home">TodoList</a></li>
+    <li style="float:right"><a href="#about" onclick="logout()">Logout</a></li>
+</ul>
+<h1>TodoList</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Completed</th>
+      <th>Check Here!</th>
+    </tr>
+  </thead>
+  <tbody id="table"></tbody>
+</table><br>
+<button type="button" id="bttn" onclick="loadjson()">Submit</button>
+<script>
+$(document).ready(function(){
+  var data_file="https://jsonplaceholder.typicode.com/todos";
+    var http_request=new XMLHttpRequest();
+    http_request.onreadystatechange=function(){
+      if(http_request.readyState == 4){
+        var jsonObj = JSON.parse(http_request.responseText);
+        for(var i=0;i<jsonObj.length;i++){
+          if(jsonObj[i].completed == true){
+            $('#table').append('<tr style="background-color:#bddef9"><td>'+jsonObj[i].title+'</td><td>'+jsonObj[i].completed+'</td><td><center><input class="form-check-input" type="checkbox" value="" id="cb1" disabled></center></td></tr>');
+          }
+          else{
+            $('#table').append('<tr><td>'+jsonObj[i].title+'</td><td>'+jsonObj[i].completed+'</td><td><center><input class="form-check-input" type="checkbox" value="" id="cb1"></center></td></tr>');
+          }
+        }
+      }
+    }
+    http_request.open('GET',data_file,true);
+    http_request.send();
+  });
+  
+  function loadjson(){
+    var promise = new Promise(function(resolve,reject){
+      if($(':checkbox:checked').length >= 5){
+        resolve();
+      }
+      else{
+        reject();
+      }
+    });
+    
+    promise.then(function(){
+      alert('Congratulations');
+    }).catch(function(){
+      alert('Please complete atleast 5 tasks');
+    });
+  }
+  
+  function logout(){
+      window.location.replace('index.html');
+    }
+  </script>
+</body>
+</html>
