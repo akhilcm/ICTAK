@@ -21,8 +21,17 @@ module.exports.revr= (a,b)=>{
      b = Math.floor(b/10);
 }
 
-module.exports.isPrime = (num) => {
-    for(let i = 2; i < num; i++)
-      if(num % i === 0) return false;
-    return num > 1;
-  }
+module.exports.primecheck = (x) => {
+    var k = 0;
+    for(var i=1;i<=x;i++){
+        if(x% i == 0){
+            k++;
+        }
+    }
+    if(k==2){
+        console.log(x + " is a prime number");
+    }
+    else{
+        console.log(x + " is not a prime number");
+    }
+  };
